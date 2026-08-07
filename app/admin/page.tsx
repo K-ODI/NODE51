@@ -13,7 +13,7 @@ export default async function AdminPage() {
     )
   }
 
-  const [contactsRes, subsRes, partnersRes, speakersRes, pressRes, mediaRes, sessionsRes] = await Promise.all([
+  const [contactsRes, subsRes, partnersRes, speakersRes, pressRes, mediaRes, sessionsRes, adminsRes] = await Promise.all([
     supabase.from("contact_submissions").select("*").order("created_at", { ascending: false }).limit(200),
     supabase.from("newsletter_subscribers").select("*").order("created_at", { ascending: false }).limit(500),
     supabase.from("partner_submissions").select("*").order("created_at", { ascending: false }).limit(200),
@@ -26,6 +26,7 @@ export default async function AdminPage() {
       .order("day", { ascending: true })
       .order("start_time", { ascending: true })
       .limit(300),
+    supabase.from("admin_users").select("id,username,created_at").order("created_at", { ascending: true }).limit(100),
   ])
 
   const data: AdminData = {
@@ -36,6 +37,7 @@ export default async function AdminPage() {
     press: pressRes.data ?? [],
     media: mediaRes.data ?? [],
     sessions: (sessionsRes.data as unknown as AdminData["sessions"]) ?? [],
+    admins: adminsRes.data ?? [],
   }
 
   return <AdminDashboard data={data} />

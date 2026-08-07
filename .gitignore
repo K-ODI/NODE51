@@ -48,3 +48,4 @@ skills-lock.json
 .idea/
 .vscode/*
 !.vscode/extensions.json
+.env*

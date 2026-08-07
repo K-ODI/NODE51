@@ -97,6 +97,19 @@ alter table public.media_contacts enable row level security;
 
 
 -- ============================================================
+-- Utilisateurs admin (back-office)
+-- pw = hash PBKDF2 "saltHex:hashHex" — jamais de mot de passe en clair.
+-- ============================================================
+create table if not exists public.admin_users (
+  id          uuid primary key default gen_random_uuid(),
+  created_at  timestamptz not null default now(),
+  username    text not null unique,
+  pw          text not null
+);
+alter table public.admin_users enable row level security;
+
+
+-- ============================================================
 -- Programme / Agenda
 -- ============================================================
 create table if not exists public.sessions (

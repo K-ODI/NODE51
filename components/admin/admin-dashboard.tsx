@@ -14,9 +14,12 @@ import {
   Plus,
   Pencil,
   X,
+  Users,
   type LucideIcon,
 } from "lucide-react"
 import {
+  addAdminUser,
+  deleteAdminUser,
   addSpeaker,
   updateSpeaker,
   toggleSpeakerPublished,
@@ -46,6 +49,7 @@ export interface AdminData {
   press: Record<string, string | boolean | null>[]
   media: Record<string, string | null>[]
   sessions: (Record<string, string | boolean | null> & { speakers?: { name: string } | null })[]
+  admins: Record<string, string | null>[]
 }
 
 const INPUT =
@@ -142,6 +146,7 @@ export function AdminDashboard({ data }: { data: AdminData }) {
     { id: "sessions", label: "Programme", icon: CalendarDays, count: data.sessions.length },
     { id: "press", label: "Communiqués", icon: Newspaper, count: data.press.length },
     { id: "media", label: "Contacts presse", icon: AtSign, count: data.media.length },
+    { id: "users", label: "Utilisateurs", icon: Users, count: data.admins.length },
   ]
 
   const kpis: { label: string; value: number; Icon: LucideIcon }[] = [
@@ -645,6 +650,74 @@ export function AdminDashboard({ data }: { data: AdminData }) {
                             <td className={TD}>{r.email}</td>
                             <td className={`${TD} whitespace-nowrap`}>
                               <form action={deleteMediaContact}>
+                                <input type="hidden" name="id" value={String(r.id)} />
+                                <button
+                                  aria-label="Supprimer"
+                                  className="w-8 h-8 flex items-center justify-center rounded-lg border border-destructive/40 text-destructive hover:bg-destructive/10 transition-colors"
+                                >
+                                  <Trash2 className="w-3.5 h-3.5" />
+                                </button>
+                              </form>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </Card>
+              )}
+            </div>
+          )}
+
+          {/* ===== Utilisateurs admin ===== */}
+          {active === "users" && (
+            <div>
+              <SectionTitle count={data.admins.length}>Utilisateurs</SectionTitle>
+              <Card className="p-4 mb-5">
+                <form action={addAdminUser} className="flex flex-wrap gap-2 items-center">
+                  <input name="username" required placeholder="Identifiant *" className={INPUT} />
+                  <input
+                    name="password"
+                    type="password"
+                    required
+                    minLength={8}
+                    placeholder="Mot de passe (8+ car.) *"
+                    className={INPUT}
+                  />
+                  <button type="submit" className={BTN_ADD}>
+                    <Plus className="w-3.5 h-3.5" /> AJOUTER
+                  </button>
+                </form>
+                <p className="mt-3 font-mono text-[11px] text-muted-foreground">
+                  Les mots de passe sont hachés (PBKDF2), jamais stockés en clair. Pour changer un mot de passe :
+                  supprime l'utilisateur et recrée-le.
+                </p>
+              </Card>
+
+              {data.admins.length === 0 ? (
+                <p className="text-sm text-muted-foreground">
+                  Aucun utilisateur en base. L'accès reste possible via les identifiants d'environnement (bootstrap).
+                </p>
+              ) : (
+                <Card className="overflow-hidden">
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm">
+                      <thead>
+                        <tr className="bg-secondary/40 border-b border-border">
+                          {["Identifiant", "Créé le", "Actions"].map((c) => (
+                            <th key={c} className={TH}>
+                              {c}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {data.admins.map((r) => (
+                          <tr key={String(r.id)} className="border-b border-border/60 last:border-0 hover:bg-secondary/20">
+                            <td className={TD}>{r.username}</td>
+                            <td className={`${TD} whitespace-nowrap`}>{fmt(r.created_at)}</td>
+                            <td className={`${TD} whitespace-nowrap`}>
+                              <form action={deleteAdminUser}>
                                 <input type="hidden" name="id" value={String(r.id)} />
                                 <button
                                   aria-label="Supprimer"

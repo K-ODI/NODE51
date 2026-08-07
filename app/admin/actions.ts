@@ -2,11 +2,33 @@
 
 import { revalidatePath } from "next/cache"
 import { getSupabaseAdmin } from "@/lib/supabase-admin"
+import { hashPassword } from "@/lib/admin-auth"
 
 const s = (fd: FormData, k: string) => String(fd.get(k) ?? "").trim()
 
 function refresh(...paths: string[]) {
   for (const p of paths) revalidatePath(p)
+}
+
+// ---------- Utilisateurs admin ----------
+export async function addAdminUser(formData: FormData) {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) return
+  const username = s(formData, "username")
+  const password = String(formData.get("password") ?? "")
+  if (!username || password.length < 8) return // mot de passe : 8 caractères minimum
+  const pw = await hashPassword(password)
+  await supabase.from("admin_users").insert({ username, pw })
+  refresh("/admin")
+}
+
+export async function deleteAdminUser(formData: FormData) {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) return
+  const id = s(formData, "id")
+  if (!id) return
+  await supabase.from("admin_users").delete().eq("id", id)
+  refresh("/admin")
 }
 
 // ---------- Speakers ----------
