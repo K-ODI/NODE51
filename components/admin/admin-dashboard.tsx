@@ -15,6 +15,7 @@ import {
   Pencil,
   X,
   Users,
+  LogOut,
   type LucideIcon,
 } from "lucide-react"
 import {
@@ -205,6 +206,15 @@ export function AdminDashboard({ data }: { data: AdminData }) {
             )
           })}
         </nav>
+        <div className="p-3 border-t border-border">
+          <a
+            href="/admin/logout"
+            className="w-full flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-muted-foreground hover:text-destructive hover:bg-destructive/10 transition-colors"
+          >
+            <LogOut className="w-4 h-4 shrink-0" />
+            <span>Se déconnecter</span>
+          </a>
+        </div>
       </aside>
 
       {/* Main */}
@@ -222,6 +232,12 @@ export function AdminDashboard({ data }: { data: AdminData }) {
               {item.label}
             </button>
           ))}
+          <a
+            href="/admin/logout"
+            className="shrink-0 flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-mono tracking-wider text-muted-foreground hover:text-destructive"
+          >
+            <LogOut className="w-3.5 h-3.5" /> Déconnexion
+          </a>
         </div>
 
         {/* Topbar */}
