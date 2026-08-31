@@ -43,7 +43,7 @@ export function Footer() {
             </Link>
 
             <p className="text-muted-foreground max-w-sm mb-6">
-              African Tech, Innovation & Sovereignty Week. Le catalyseur de la transformation technologique africaine.
+              African Tech, Innovation & Sovereignty Day. Le catalyseur de la transformation technologique africaine.
             </p>
 
             <div className="max-w-sm mb-8">
@@ -134,7 +134,7 @@ export function Footer() {
 
               <div className="mt-8 p-4 bg-white/5 border-l-2 border-primary">
                 <span className="font-mono text-[10px] tracking-widest text-muted-foreground">DATES</span>
-                <p className="text-foreground font-black">9—10 FÉV 2027</p>
+                <p className="text-foreground font-black">23 FÉV 2027</p>
               </div>
             </div>
           </div>

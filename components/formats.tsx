@@ -39,7 +39,7 @@ export function Formats() {
       title: "JOB & SKILL",
       subtitle: "FAIR",
       time: "ALL DAY",
-      desc: "200+ entreprises, 5000+ opportunités d'emploi et de stage pour les talents africains.",
+      desc: "200+ entreprises, 2000+ opportunités d'emploi et de stage pour les talents africains.",
       highlight: false,
     },
     {
@@ -71,7 +71,7 @@ export function Formats() {
             <span className="text-stroke text-primary">CONFÉRENCE</span>
           </h2>
           <p className="text-muted-foreground max-w-md lg:text-right">
-            Une semaine d'expériences uniques conçues pour maximiser l'engagement et générer des résultats concrets.
+            Une journée d'expériences uniques conçues pour maximiser l'engagement et générer des résultats concrets.
           </p>
         </Reveal>
 

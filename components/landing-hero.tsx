@@ -128,7 +128,7 @@ export function LandingHero() {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12 leading-relaxed">
-            African Tech, Innovation &amp; Sovereignty Week. Le catalyseur de la transformation technologique africaine,
+            African Tech, Innovation &amp; Sovereignty Day. Le catalyseur de la transformation technologique africaine,
             réunissant les leaders mondiaux pour façonner l'avenir du continent.
           </p>
 

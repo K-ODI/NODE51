@@ -23,7 +23,7 @@ export default function FAQPage() {
         },
         {
           q: "Quand et où se déroule l'événement ?",
-          a: "NODE 51 se tiendra les 9 et 10 février 2027 au CICAD (Centre International de Conférences Abdou Diouf) à Diamniadio, Dakar, Sénégal.",
+          a: "NODE 51 se tiendra le 23 février 2027 au CICAD (Centre International de Conférences Abdou Diouf) à Diamniadio, Dakar, Sénégal.",
         },
       ],
     },
@@ -32,7 +32,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "Comment obtenir mon badge visiteur ?",
-          a: "Les inscriptions ouvriront à l'automne 2026. Inscrivez-vous à notre newsletter pour être informé en priorité. Différentes formules seront disponibles : pass journée, pass 2 jours, et pass VIP.",
+          a: "Les inscriptions ouvriront à l'automne 2026. Inscrivez-vous à notre newsletter pour être informé en priorité. Différentes formules seront disponibles : pass standard, pass premium et pass VIP.",
         },
         {
           q: "Quels sont les tarifs prévus ?",
@@ -66,7 +66,7 @@ export default function FAQPage() {
       questions: [
         {
           q: "Comment devenir partenaire de NODE 51 ?",
-          a: "Consultez notre page Partenaires pour découvrir les différentes formules (Platinum, Gold, Silver, Bronze, Startup). Contactez notre équipe partenariats à partners@node51.io pour une proposition personnalisée.",
+          a: "Consultez notre page Partenaires pour découvrir les différentes formules (Platinum, Gold, Silver, Bronze, Startup). Contactez notre équipe partenariats à partenariats@node51.io pour une proposition personnalisée.",
         },
         {
           q: "Proposez-vous des partenariats médias ?",

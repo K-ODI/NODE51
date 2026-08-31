@@ -23,7 +23,7 @@ export function Audience() {
       code: "EDU",
       title: "UNIVERSITÉS",
       desc: "Établissements d'enseignement supérieur et centres de recherche formant les talents de demain",
-      count: "40+",
+      count: "10+",
     },
     {
       code: "STR",
@@ -41,7 +41,7 @@ export function Audience() {
       code: "NGO",
       title: "ONG & FONDATIONS",
       desc: "Organisations engagées dans le développement des compétences et l'inclusion numérique",
-      count: "30+",
+      count: "15+",
     },
   ]
 
@@ -111,7 +111,7 @@ export function Audience() {
                   "50 VCs",
                   "200 ENTREPRISES",
                   "500 STARTUPS",
-                  "5000 OPPORTUNITÉS",
+                  "2000 OPPORTUNITÉS",
                 ].map((text) => (
                   <span key={text} className="flex items-center gap-4">
                     <span className="w-2 h-2 bg-primary" />

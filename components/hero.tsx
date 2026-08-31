@@ -30,7 +30,7 @@ export function Hero() {
             <div className="hidden md:inline-flex items-center gap-2 md:gap-3 mb-3 md:mb-6 pl-1">
               <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary flex-shrink-0" />
               <span className="font-mono text-[7px] md:text-xs tracking-widest text-muted-foreground uppercase">
-                African Tech, Innovation & Sovereignty Week
+                African Tech, Innovation & Sovereignty Day
               </span>
             </div>
 
@@ -57,7 +57,7 @@ export function Hero() {
                   DATES
                 </div>
                 <div className="text-2xl md:text-4xl lg:text-6xl font-black text-foreground leading-none tracking-tight">
-                  9—10
+                  23
                 </div>
                 <div className="font-mono text-[10px] md:text-base lg:text-xl text-primary mt-1 md:mt-3 tracking-[0.1em] md:tracking-[0.2em]">
                   FÉV 2027

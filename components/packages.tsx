@@ -23,7 +23,7 @@ const packages: Package[] = [
     benefits: [
       "Naming Exclusif sur toute la communication",
       "Keynote Grande Scène (30 min)",
-      "Stand Premium 100 m²",
+      "Stand Premium 36 m²",
       "Vidéo Interview Corporate",
       "20 Invitations VIP",
       "Accès Institutionnel aux ministres",
@@ -36,7 +36,7 @@ const packages: Package[] = [
     featured: false,
     benefits: [
       "Panel Grande Scène (15 min)",
-      "Stand Premium 50 m²",
+      "Stand Premium 36 m²",
       "Branding Gold",
       "10 Invitations VIP + Gala",
       "Interview NODE 51 TALKS",

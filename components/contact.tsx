@@ -115,7 +115,7 @@ export function Contact() {
                 <div>
                   <span className="font-mono text-[10px] tracking-widest text-muted-foreground">LIEU</span>
                   <p className="text-foreground font-medium text-sm lg:text-base">CICAD, Diamniadio, Sénégal</p>
-                  <p className="text-sm text-muted-foreground">9 &amp; 10 Février 2027</p>
+                  <p className="text-sm text-muted-foreground">23 Février 2027</p>
                 </div>
               </div>
             </div>

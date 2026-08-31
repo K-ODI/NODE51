@@ -7,10 +7,7 @@ import Link from "next/link"
 export const dynamic = "force-dynamic"
 export const metadata = { title: "Programme | NODE 51" }
 
-const DAYS = [
-  { date: "2027-02-09", label: "Jour 1 — Mardi 9 février 2027" },
-  { date: "2027-02-10", label: "Jour 2 — Mercredi 10 février 2027" },
-]
+const DAYS = [{ date: "2027-02-23", label: "Mardi 23 février 2027" }]
 
 interface Session {
   id: string
@@ -46,7 +43,7 @@ export default async function ProgrammePage() {
       <Navigation />
       <PageHeader
         title="PROGRAMME"
-        subtitle="Deux jours de keynotes, panels, pitchs et masterclasses. 9 & 10 février 2027, CICAD, Dakar."
+        subtitle="Une journée de keynotes, panels, pitchs et masterclasses. 23 février 2027, CICAD, Dakar."
         breadcrumb="PROGRAMME"
       />
 

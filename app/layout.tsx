@@ -33,7 +33,7 @@ const spaceMono = localFont({
 export const metadata: Metadata = {
   title: "NODE 51 | Dakar 2027",
   description:
-    "African Tech, Innovation & Sovereignty Week. 9-10 Février 2027, Dakar, Sénégal. Le catalyseur de la transformation technologique africaine.",
+    "African Tech, Innovation & Sovereignty Day. 23 Février 2027, Dakar, Sénégal. Le catalyseur de la transformation technologique africaine.",
   generator: "v0.app",
   icons: {
     icon: [
