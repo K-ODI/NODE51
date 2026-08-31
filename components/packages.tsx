@@ -16,6 +16,20 @@ interface Package {
 
 const packages: Package[] = [
   {
+    tier: "FONDATEUR",
+    price: "150 000",
+    tagline: "Pilier Fondateur de NODE 51",
+    featured: false,
+    benefits: [
+      "Naming exclusif de l'événement",
+      "Keynote Scène Principale (45 min)",
+      "Stand Premium 30 m²",
+      "20 Invitations VIP",
+      "Présence sur tous les hackathons",
+      "Accès institutionnel aux ministres",
+    ],
+  },
+  {
     tier: "PLATINUM",
     price: "100 000",
     tagline: "Statut de Fondateur Institutionnel",
@@ -24,9 +38,37 @@ const packages: Package[] = [
       "Naming Exclusif sur toute la communication",
       "Keynote Grande Scène (30 min)",
       "Stand Premium 36 m²",
-      "Vidéo Interview Corporate",
       "20 Invitations VIP",
       "Accès Institutionnel aux ministres",
+      "Base données 500+ startups",
+      "Programme ELEVATE 2030",
+    ],
+  },
+  {
+    tier: "CALIFORNIUM",
+    price: "100 000",
+    tagline: "Partenaire Clé du Sommet",
+    featured: false,
+    benefits: [
+      "Panel Grande Scène (15 min)",
+      "Stand Premium 30 m²",
+      "Branding Gold",
+      "10 Invitations VIP + Gala",
+      "Interview NODE 51 TALKS",
+      "Présence 3 hackathons",
+    ],
+  },
+  {
+    tier: "DIAMANT ROUGE",
+    price: "75 000",
+    tagline: "Visibilité Premium & Masterclass",
+    featured: false,
+    benefits: [
+      "Panel Grande Scène (15 min)",
+      "Stand 18 m²",
+      "Masterclass Dédiée (90 min)",
+      "10 Invitations VIP",
+      "Présence 2 hackathons",
     ],
   },
   {
@@ -43,18 +85,25 @@ const packages: Package[] = [
     ],
   },
   {
+    tier: "TRITIUM",
+    price: "50 000",
+    tagline: "Présence Solide et Networking",
+    featured: false,
+    benefits: ["Stand 18 m²", "Branding Premium + Gala", "5 Invitations VIP", "Présence 1 hackathon"],
+  },
+  {
     tier: "SILVER",
     price: "25 000",
     tagline: "Visibilité Qualifiée et Accès Privilégié",
     featured: false,
-    benefits: ["Stand 18 m²", "Masterclass Dédiée (90 min)", "Branding Silver", "5 Invitations VIP"],
+    benefits: ["Stand 18 m²", "Masterclass Dédiée (90 min)", "Branding Silver", "5 Invitations VIP", "Job & Skill Fair"],
   },
   {
     tier: "BRONZE",
     price: "10 000",
     tagline: "Présence Stratégique et Networking",
     featured: false,
-    benefits: ["Visibilité Digitale", "2 Invitations VIP", "Pack PME/Startup", "Tarifs préférentiels stands"],
+    benefits: ["Visibilité Digitale", "Logo sur les supports", "2 Invitations VIP", "Accès réseaux entreprises"],
   },
   {
     tier: "STARTUP",
@@ -120,7 +169,7 @@ export function Packages() {
         </Reveal>
 
         {/* Pricing cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4">
           {packages.map((pkg, index) => (
             <motion.div
               key={pkg.tier}
