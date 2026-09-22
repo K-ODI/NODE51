@@ -138,7 +138,7 @@ export function Packages() {
       <style>{`
         .partners-aurora-bg { position: absolute; inset: 0; filter: blur(110px); }
         .partners-shape-1, .partners-shape-2 { position: absolute; border-radius: 9999px; }
-        .partners-shape-1 { width: 620px; height: 620px; background-color: rgba(74, 222, 128, 0.45); top: 0%; left: 8%; animation: partnersAuroraA 22s infinite alternate ease-in-out; }
+        .partners-shape-1 { width: 620px; height: 620px; background-color: rgba(0, 172, 152, 0.45); top: 0%; left: 8%; animation: partnersAuroraA 22s infinite alternate ease-in-out; }
         .partners-shape-2 { width: 520px; height: 520px; background-color: rgba(16, 185, 129, 0.4); bottom: 0%; right: 8%; animation: partnersAuroraB 26s infinite alternate ease-in-out; }
         @keyframes partnersAuroraA { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(120px,60px) rotate(180deg); } }
         @keyframes partnersAuroraB { from { transform: translate(0,0) rotate(0deg); } to { transform: translate(-120px,-60px) rotate(-180deg); } }
@@ -189,7 +189,7 @@ export function Packages() {
               <div
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-25"
                 style={{
-                  background: "linear-gradient(45deg, #4ade80, #10b981)",
+                  background: "linear-gradient(45deg, #00AC98, #10b981)",
                   filter: "blur(50px)",
                 }}
               />

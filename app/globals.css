@@ -3,7 +3,7 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Direction artistique NODE51 - noir neutre, gris zinc, vert #4ade80, blanc cassé (uniforme, sans bleu) */
+/* Direction artistique NODE51 - noir neutre, gris zinc, vert #00AC98, blanc cassé (uniforme, sans bleu) */
 :root {
   --background: #09090b;
   --foreground: #f4f4f5;
@@ -11,7 +11,7 @@
   --card-foreground: #f4f4f5;
   --popover: #161618;
   --popover-foreground: #f4f4f5;
-  --primary: #4ade80;
+  --primary: #00AC98;
   --primary-foreground: #09090b;
   --secondary: #17171a;
   --secondary-foreground: #f4f4f5;
@@ -23,8 +23,8 @@
   --destructive-foreground: #690005;
   --border: #ffffff14;
   --input: #161618;
-  --ring: #4ade80;
-  --chart-1: #4ade80;
+  --ring: #00AC98;
+  --chart-1: #00AC98;
   --chart-2: #22c55e;
   --chart-3: #86efac;
   --chart-4: #a1a1aa;
@@ -32,12 +32,12 @@
   --radius: 0rem;
   --sidebar: #111113;
   --sidebar-foreground: #f4f4f5;
-  --sidebar-primary: #4ade80;
+  --sidebar-primary: #00AC98;
   --sidebar-primary-foreground: #09090b;
   --sidebar-accent: #27272a;
   --sidebar-accent-foreground: #f4f4f5;
   --sidebar-border: #ffffff14;
-  --sidebar-ring: #4ade80;
+  --sidebar-ring: #00AC98;
 }
 
 .dark {
@@ -47,7 +47,7 @@
   --card-foreground: #f4f4f5;
   --popover: #161618;
   --popover-foreground: #f4f4f5;
-  --primary: #4ade80;
+  --primary: #00AC98;
   --primary-foreground: #09090b;
   --secondary: #17171a;
   --secondary-foreground: #f4f4f5;
@@ -59,20 +59,20 @@
   --destructive-foreground: #690005;
   --border: #ffffff14;
   --input: #161618;
-  --ring: #4ade80;
-  --chart-1: #4ade80;
+  --ring: #00AC98;
+  --chart-1: #00AC98;
   --chart-2: #22c55e;
   --chart-3: #86efac;
   --chart-4: #a1a1aa;
   --chart-5: #52525b;
   --sidebar: #111113;
   --sidebar-foreground: #f4f4f5;
-  --sidebar-primary: #4ade80;
+  --sidebar-primary: #00AC98;
   --sidebar-primary-foreground: #09090b;
   --sidebar-accent: #27272a;
   --sidebar-accent-foreground: #f4f4f5;
   --sidebar-border: #ffffff14;
-  --sidebar-ring: #4ade80;
+  --sidebar-ring: #00AC98;
 }
 
 @theme inline {

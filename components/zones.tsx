@@ -40,7 +40,7 @@ const zones = [
     number: "03",
     title: "GREENTECH & CLIMATE",
     subtitle: "ZONE",
-    accent: "#4ade80", // green
+    accent: "#00AC98", // green
     description:
       "Face aux défis climatiques, l'Afrique possède les ressources pour devenir leader mondial des technologies vertes.",
     topics: [

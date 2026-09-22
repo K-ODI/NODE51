@@ -20,8 +20,8 @@ void main() {
     pattern += sin(center.x * 3.0 * i + time) * cos(center.y * 2.0 * i - time * 0.5);
   }
   vec3 color1 = vec3(0.035, 0.035, 0.043); // #09090b background
-  vec3 color2 = vec3(0.290, 0.871, 0.502); // #4ade80 primary green
-  vec3 color3 = vec3(0.050, 1.000, 0.550); // vibrant green accent
+  vec3 color2 = vec3(0.000, 0.675, 0.596); // #00AC98 primary teal-green
+  vec3 color3 = vec3(0.082, 0.851, 0.686); // #15D9AF bright accent
   float mask = smoothstep(-1.0, 1.0, pattern);
   vec3 finalColor = mix(color1, color2, mask * 0.28);
   finalColor = mix(finalColor, color3, pow(mask, 3.0) * 0.10);
@@ -135,7 +135,7 @@ export function LandingHero() {
           <div className="flex flex-wrap gap-6">
             <Link
               href="#vision"
-              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform duration-300 font-mono text-sm tracking-widest px-8 py-4 rounded-lg shadow-[0_0_20px_rgba(74,222,128,0.3)]"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-transform duration-300 font-mono text-sm tracking-widest px-8 py-4 rounded-lg shadow-[0_0_20px_rgba(0,172,152,0.3)]"
             >
               DÉCOUVRIR L'ÉVÉNEMENT
             </Link>

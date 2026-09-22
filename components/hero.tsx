@@ -14,7 +14,7 @@ export function Hero() {
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] md:w-[1000px] md:h-[1000px] pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(74, 222, 128, 0.3) 0%, rgba(74, 222, 128, 0.15) 30%, rgba(74, 222, 128, 0.03) 60%, transparent 80%)",
+            "radial-gradient(ellipse at center, rgba(0, 172, 152, 0.3) 0%, rgba(0, 172, 152, 0.15) 30%, rgba(0, 172, 152, 0.03) 60%, transparent 80%)",
         }}
       />
 
