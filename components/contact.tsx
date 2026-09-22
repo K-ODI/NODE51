@@ -102,7 +102,18 @@ export function Contact() {
                 </div>
                 <div>
                   <span className="font-mono text-[10px] tracking-widest text-muted-foreground">TÉLÉPHONE</span>
-                  <p className="text-foreground font-medium text-sm lg:text-base">+221 33 XXX XX XX</p>
+                  <a
+                    href="tel:+33783821150"
+                    className="block text-foreground font-medium text-sm lg:text-base hover:text-primary transition-colors"
+                  >
+                    France : +33 7 83 82 11 50
+                  </a>
+                  <a
+                    href="tel:+221772880336"
+                    className="block text-foreground font-medium text-sm lg:text-base hover:text-primary transition-colors"
+                  >
+                    Sénégal : +221 77 2 88 03 36
+                  </a>
                 </div>
               </div>
 
@@ -114,7 +125,7 @@ export function Contact() {
                 </div>
                 <div>
                   <span className="font-mono text-[10px] tracking-widest text-muted-foreground">LIEU</span>
-                  <p className="text-foreground font-medium text-sm lg:text-base">CICAD, Diamniadio, Sénégal</p>
+                  <p className="text-foreground font-medium text-sm lg:text-base">Dakar, Sénégal</p>
                   <p className="text-sm text-muted-foreground">23 Février 2027</p>
                 </div>
               </div>

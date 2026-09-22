@@ -128,8 +128,17 @@ export function Footer() {
                     www.node51.io
                   </a>
                 </li>
-                <li className="text-muted-foreground">+221 33 XXX XX XX</li>
-                <li className="text-muted-foreground">CICAD, Diamniadio, Sénégal</li>
+                <li>
+                  <a href="tel:+33783821150" className="text-muted-foreground hover:text-foreground transition-colors">
+                    France : +33 7 83 82 11 50
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+221772880336" className="text-muted-foreground hover:text-foreground transition-colors">
+                    Sénégal : +221 77 2 88 03 36
+                  </a>
+                </li>
+                <li className="text-muted-foreground">Dakar, Sénégal</li>
               </ul>
 
               <div className="mt-8 p-4 bg-white/5 border-l-2 border-primary">
