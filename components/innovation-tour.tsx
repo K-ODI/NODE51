@@ -89,16 +89,12 @@ export function InnovationTour() {
           </h2>
           <div className="max-w-3xl space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
-              En amont du sommet, NODE51 déploie un cycle de hackathons internationaux :{" "}
-              <span className="text-foreground font-medium">« 24 Heures pour Coder l'Afrique de Demain »</span>. Ces
-              marathons de création réunissent développeurs, designers et entrepreneurs autour de défis tech africains
-              concrets.
+              En amont du sommet, NODE51 déploie un cycle de hackathons internationaux réunissant développeurs,
+              designers et entrepreneurs autour de défis tech africains concrets.
             </p>
             <p>
-              Le cycle démarre le <span className="text-foreground font-medium">26 octobre 2026 à Dakar</span> dans le
-              cadre des JOJ26, puis se poursuit en ligne dans plusieurs pays africains et de la diaspora.
+              Les équipes lauréates de chaque édition se qualifient pour la grande finale lors du Sommet NODE51 à Dakar.
             </p>
-            <p>Les équipes lauréates de chaque édition se qualifient pour la grande finale lors du Sommet NODE51.</p>
           </div>
         </Reveal>
 
