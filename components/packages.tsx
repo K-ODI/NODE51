@@ -148,7 +148,7 @@ export function Packages() {
         {/* Section header (consistent with the rest of the site) */}
         <Reveal className="flex items-center gap-4 lg:gap-6 mb-10 lg:mb-16">
           <span className="text-6xl lg:text-8xl font-display font-black text-transparent [-webkit-text-stroke:1px_var(--primary)] select-none">
-            05
+            06
           </span>
           <div className="flex flex-col">
             <div className="w-12 h-px bg-primary mb-2" />

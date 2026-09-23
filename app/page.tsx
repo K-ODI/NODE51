@@ -4,6 +4,7 @@ import { Vision } from "@/components/vision"
 import { Zones } from "@/components/zones"
 import { Formats } from "@/components/formats"
 import { Audience } from "@/components/audience"
+import { InnovationTour } from "@/components/innovation-tour"
 import { Packages } from "@/components/packages"
 import { FAQ } from "@/components/faq"
 import { Contact } from "@/components/contact"
@@ -18,6 +19,7 @@ export default function HomePage() {
       <Zones />
       <Formats />
       <Audience />
+      <InnovationTour />
       <Packages />
       <FAQ />
       <Contact />

@@ -51,7 +51,7 @@ export function Contact() {
       <div className="px-6 lg:px-12">
         {/* Section label */}
         <Reveal className="flex items-center gap-4 mb-10 lg:mb-16">
-          <span className="font-mono text-sm lg:text-base tracking-widest text-muted-foreground">06</span>
+          <span className="font-mono text-sm lg:text-base tracking-widest text-muted-foreground">07</span>
           <div className="w-12 h-px bg-primary" />
           <span className="font-mono text-sm lg:text-base tracking-widest text-primary">CONTACT</span>
         </Reveal>
