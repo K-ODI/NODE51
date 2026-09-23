@@ -141,44 +141,51 @@ export function InnovationTour() {
             </span>
           </div>
 
-          <div className="border border-border divide-y divide-border">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {calendar.map((row, i) => (
-              <motion.div
+              <motion.article
                 key={i}
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "0px 0px -8% 0px" }}
-                transition={{ duration: 0.4, ease: EASE, delay: (i % 4) * 0.05 }}
-                className={`grid md:grid-cols-[150px_1fr] gap-2 md:gap-8 p-5 lg:p-6 ${
-                  row.finale ? "bg-primary/[0.06]" : "hover:bg-card/40 transition-colors"
+                transition={{ duration: 0.45, ease: EASE, delay: (i % 3) * 0.08 }}
+                className={`group flex flex-col rounded-2xl overflow-hidden border transition-colors ${
+                  row.finale ? "border-primary/50 bg-primary/[0.06]" : "border-border bg-card/40 hover:border-primary/40"
                 }`}
               >
-                <div className="flex flex-col gap-2">
-                  <span className={`font-mono text-sm font-bold ${row.finale ? "text-primary" : "text-foreground"}`}>
-                    {row.date}
-                  </span>
+                {/* Visuel */}
+                <div className="relative h-44 lg:h-48 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={`/node51-hackathon-${(i % 3) + 1}.jpg`}
+                    alt={`Hackathon NODE51 — ${row.place}`}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
                   <span
-                    className={`inline-block w-fit font-mono text-[10px] tracking-widest px-2 py-0.5 ${
+                    className={`absolute top-3 left-3 font-mono text-[10px] tracking-widest px-2.5 py-1 rounded-full ${
                       row.finale
                         ? "bg-primary text-primary-foreground"
-                        : row.format === "Présentiel"
-                          ? "bg-primary/10 text-primary"
-                          : "bg-secondary text-muted-foreground"
+                        : "bg-background/70 backdrop-blur-sm text-foreground border border-white/10"
                     }`}
                   >
                     {row.finale ? "GRANDE FINALE" : row.format}
                   </span>
+                  <span className="absolute bottom-3 left-3 font-mono text-xs font-bold text-primary bg-background/70 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/10">
+                    {row.date}
+                  </span>
                 </div>
-                <div>
-                  <div className="flex flex-wrap items-baseline gap-x-2">
-                    <span className="text-base lg:text-lg font-black text-foreground">{row.place}</span>
-                    {row.venue && !row.finale && (
-                      <span className="text-sm text-muted-foreground">— {row.venue}</span>
-                    )}
-                  </div>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{row.themes}</p>
+
+                {/* Contenu */}
+                <div className="flex flex-col flex-1 p-5">
+                  <h4 className="text-lg font-black text-foreground">{row.place}</h4>
+                  {row.venue && !row.finale && (
+                    <p className="text-xs text-muted-foreground mt-0.5">{row.venue}</p>
+                  )}
+                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{row.themes}</p>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </div>
         </div>
