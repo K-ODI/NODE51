@@ -54,7 +54,7 @@ export function Navigation() {
             <img
               src="/node51-logo.png"
               alt="NODE 51"
-              className="h-8 lg:h-9 w-auto group-hover:opacity-90 transition-opacity"
+              className="h-14 lg:h-16 w-auto group-hover:opacity-90 transition-opacity"
             />
           </Link>
 
@@ -135,7 +135,7 @@ export function Navigation() {
           <div className="flex items-center justify-between px-6 h-20 border-b border-border">
             <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center" aria-label="NODE 51 — Accueil">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/node51-logo.png" alt="NODE 51" className="h-8 w-auto" />
+              <img src="/node51-logo.png" alt="NODE 51" className="h-14 w-auto" />
             </Link>
 
             <button
