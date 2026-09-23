@@ -188,14 +188,16 @@ export function InnovationTour() {
                     <p className="text-xs text-muted-foreground mt-0.5">{row.venue}</p>
                   )}
                   <p className="text-sm text-muted-foreground mt-3 mb-5 leading-relaxed">{row.themes}</p>
-                  <button
-                    type="button"
-                    onClick={() => setOpenHackathon(HACKATHON_OPTIONS[i])}
-                    className="group/btn mt-auto inline-flex items-center justify-center gap-2 w-full font-mono text-xs tracking-widest rounded-lg py-2.5 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-                  >
-                    S'INSCRIRE
-                    <span className="transition-transform group-hover/btn:translate-x-1">→</span>
-                  </button>
+                  {!row.finale && (
+                    <button
+                      type="button"
+                      onClick={() => setOpenHackathon(HACKATHON_OPTIONS[i])}
+                      className="group/btn mt-auto inline-flex items-center justify-center gap-2 w-full font-mono text-xs tracking-widest rounded-lg py-2.5 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                    >
+                      S'INSCRIRE
+                      <span className="transition-transform group-hover/btn:translate-x-1">→</span>
+                    </button>
+                  )}
                 </div>
               </motion.article>
             ))}

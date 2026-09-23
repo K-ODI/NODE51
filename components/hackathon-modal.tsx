@@ -12,7 +12,6 @@ export const HACKATHON_OPTIONS = [
   "Déc. 2026 — Côte d'Ivoire (en ligne)",
   "Déc. 2026 — Belgique (en ligne)",
   "Jan. 2027 — Suisse (en ligne)",
-  "23 Fév. 2027 — Grande Finale, Dakar",
 ]
 
 const PROFILES = ["Développeur", "Designer", "Entrepreneur", "Étudiant", "Autre"]
