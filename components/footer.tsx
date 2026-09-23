@@ -29,17 +29,13 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-5">
-            <Link href="/" className="inline-flex items-center gap-3 group mb-6">
-              <div className="relative">
-                <div className="w-16 h-16 bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-display font-black text-2xl">51</span>
-                </div>
-                <div className="absolute -bottom-1 -right-1 w-16 h-16 border border-primary group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
-              </div>
-              <div>
-                <span className="font-display font-black text-2xl tracking-tighter text-foreground">NODE</span>
-                <span className="block text-xs font-mono text-muted-foreground tracking-widest">DAKAR 2027</span>
-              </div>
+            <Link href="/" className="inline-block group mb-6" aria-label="NODE 51 — Accueil">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/node51-logo.png"
+                alt="NODE 51"
+                className="h-14 lg:h-16 w-auto group-hover:opacity-90 transition-opacity"
+              />
             </Link>
 
             <p className="text-muted-foreground max-w-sm mb-6">

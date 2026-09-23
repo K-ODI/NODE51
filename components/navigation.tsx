@@ -49,17 +49,13 @@ export function Navigation() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled || isOpen ? "bg-background/95 backdrop-blur-sm" : "bg-transparent"}`}
       >
         <div className="flex items-center justify-between px-6 lg:px-12 h-20">
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-12 h-12 bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-black text-xl">51</span>
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-12 h-12 border border-primary group-hover:translate-x-1 group-hover:translate-y-1 transition-transform" />
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-display font-black text-lg tracking-tighter text-foreground">NODE</span>
-              <span className="block text-[10px] font-mono text-muted-foreground tracking-widest">DAKAR 2027</span>
-            </div>
+          <Link href="/" className="flex items-center group" aria-label="NODE 51 — Accueil">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/node51-logo.png"
+              alt="NODE 51"
+              className="h-8 lg:h-9 w-auto group-hover:opacity-90 transition-opacity"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">
@@ -137,14 +133,9 @@ export function Navigation() {
       {isOpen && (
         <div className="lg:hidden fixed inset-0 top-0 bg-background z-[55] overflow-y-auto">
           <div className="flex items-center justify-between px-6 h-20 border-b border-border">
-            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-black text-xl">51</span>
-              </div>
-              <div>
-                <span className="font-display font-black text-lg tracking-tighter text-foreground">NODE</span>
-                <span className="block text-[10px] font-mono text-muted-foreground tracking-widest">DAKAR 2027</span>
-              </div>
+            <Link href="/" onClick={() => setIsOpen(false)} className="flex items-center" aria-label="NODE 51 — Accueil">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/node51-logo.png" alt="NODE 51" className="h-8 w-auto" />
             </Link>
 
             <button
