@@ -16,6 +16,7 @@ import {
   X,
   Users,
   LogOut,
+  Code2,
   type LucideIcon,
 } from "lucide-react"
 import {
@@ -51,6 +52,7 @@ export interface AdminData {
   media: Record<string, string | null>[]
   sessions: (Record<string, string | boolean | null> & { speakers?: { name: string } | null })[]
   admins: Record<string, string | null>[]
+  hackathon: Record<string, string | null>[]
 }
 
 const INPUT =
@@ -143,6 +145,7 @@ export function AdminDashboard({ data }: { data: AdminData }) {
     { id: "partners", label: "Partenariats", icon: Handshake, count: data.partners.length },
     { id: "contacts", label: "Contacts", icon: MessageSquare, count: data.contacts.length },
     { id: "newsletter", label: "Newsletter", icon: Mail, count: data.subs.length },
+    { id: "hackathon", label: "Hackathon", icon: Code2, count: data.hackathon.length },
     { id: "speakers", label: "Speakers", icon: Mic, count: data.speakers.length },
     { id: "sessions", label: "Programme", icon: CalendarDays, count: data.sessions.length },
     { id: "press", label: "Communiqués", icon: Newspaper, count: data.press.length },
@@ -154,6 +157,7 @@ export function AdminDashboard({ data }: { data: AdminData }) {
     { label: "Partenaires", value: data.partners.length, Icon: Handshake },
     { label: "Contacts", value: data.contacts.length, Icon: MessageSquare },
     { label: "Abonnés", value: data.subs.length, Icon: Mail },
+    { label: "Hackathon", value: data.hackathon.length, Icon: Code2 },
     { label: "Speakers", value: data.speakers.length, Icon: Mic },
     { label: "Sessions", value: data.sessions.length, Icon: CalendarDays },
     { label: "Communiqués", value: data.press.length, Icon: Newspaper },
@@ -163,6 +167,7 @@ export function AdminDashboard({ data }: { data: AdminData }) {
     ...data.partners.map((p) => ({ type: "Partenariat", label: `${p.name}${p.tier ? ` · ${p.tier}` : ""}`, date: p.created_at })),
     ...data.contacts.map((c) => ({ type: "Contact", label: String(c.name), date: c.created_at })),
     ...data.subs.map((s) => ({ type: "Newsletter", label: String(s.email), date: s.created_at })),
+    ...data.hackathon.map((h) => ({ type: "Hackathon", label: `${h.name} · ${h.hackathon}`, date: h.created_at })),
   ]
     .filter((r) => r.date)
     .sort((a, b) => String(b.date).localeCompare(String(a.date)))
@@ -311,6 +316,25 @@ export function AdminDashboard({ data }: { data: AdminData }) {
               <DataTable
                 columns={["Date", "Email", "Source", "Statut"]}
                 rows={data.subs.map((r) => [fmt(r.created_at), r.email, r.source, r.status])}
+              />
+            </div>
+          )}
+
+          {/* ===== Hackathon ===== */}
+          {active === "hackathon" && (
+            <div>
+              <SectionTitle count={data.hackathon.length}>Inscriptions Hackathon</SectionTitle>
+              <DataTable
+                columns={["Date", "Étape", "Nom", "Email", "Équipe", "Profil", "Message"]}
+                rows={data.hackathon.map((r) => [
+                  fmt(r.created_at),
+                  r.hackathon,
+                  r.name,
+                  r.email,
+                  r.team_name,
+                  r.profile,
+                  r.message,
+                ])}
               />
             </div>
           )}

@@ -97,6 +97,24 @@ alter table public.media_contacts enable row level security;
 
 
 -- ============================================================
+-- Inscriptions Hackathon (Innovation Tour)
+-- ============================================================
+create table if not exists public.hackathon_registrations (
+  id          uuid primary key default gen_random_uuid(),
+  created_at  timestamptz not null default now(),
+  hackathon   text not null,        -- étape choisie (date + ville)
+  name        text not null,
+  email       text not null,
+  team_name   text,
+  profile     text,                 -- Développeur | Designer | Entrepreneur | Étudiant | Autre
+  message     text
+);
+alter table public.hackathon_registrations enable row level security;
+create index if not exists hackathon_registrations_created_at_idx
+  on public.hackathon_registrations (created_at desc);
+
+
+-- ============================================================
 -- Utilisateurs admin (back-office)
 -- pw = hash PBKDF2 "saltHex:hashHex" — jamais de mot de passe en clair.
 -- ============================================================

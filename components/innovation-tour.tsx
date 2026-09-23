@@ -1,7 +1,9 @@
 "use client"
 
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Reveal } from "@/components/ui/reveal"
+import { HackathonModal, HACKATHON_OPTIONS } from "@/components/hackathon-modal"
 
 const EASE = [0.22, 1, 0.36, 1] as const
 
@@ -66,6 +68,8 @@ const calendar = [
 ]
 
 export function InnovationTour() {
+  const [openHackathon, setOpenHackathon] = useState<string | null>(null)
+
   return (
     <section id="innovation-tour" className="py-16 lg:py-24 bg-background overflow-hidden">
       <div className="px-6 lg:px-12">
@@ -183,13 +187,23 @@ export function InnovationTour() {
                   {row.venue && !row.finale && (
                     <p className="text-xs text-muted-foreground mt-0.5">{row.venue}</p>
                   )}
-                  <p className="text-sm text-muted-foreground mt-3 leading-relaxed">{row.themes}</p>
+                  <p className="text-sm text-muted-foreground mt-3 mb-5 leading-relaxed">{row.themes}</p>
+                  <button
+                    type="button"
+                    onClick={() => setOpenHackathon(HACKATHON_OPTIONS[i])}
+                    className="group/btn mt-auto inline-flex items-center justify-center gap-2 w-full font-mono text-xs tracking-widest rounded-lg py-2.5 bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                  >
+                    S'INSCRIRE
+                    <span className="transition-transform group-hover/btn:translate-x-1">→</span>
+                  </button>
                 </div>
               </motion.article>
             ))}
           </div>
         </div>
       </div>
+
+      <HackathonModal hackathon={openHackathon} onClose={() => setOpenHackathon(null)} />
     </section>
   )
 }
