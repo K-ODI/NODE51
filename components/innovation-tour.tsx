@@ -83,9 +83,9 @@ export function InnovationTour() {
         {/* Heading + intro */}
         <Reveal delay={0.1}>
           <h2 className="text-3xl lg:text-7xl font-black text-foreground mb-6">
-            24 HEURES POUR
+            UN CYCLE DE HACKATHONS
             <br />
-            <span className="text-stroke text-primary">CODER L'AFRIQUE</span>
+            <span className="text-stroke text-primary">INTERNATIONAUX</span>
           </h2>
           <div className="max-w-3xl space-y-4 text-base lg:text-lg text-muted-foreground leading-relaxed">
             <p>
