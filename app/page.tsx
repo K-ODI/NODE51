@@ -1,5 +1,5 @@
 import { Navigation } from "@/components/navigation"
-import { LandingHero } from "@/components/landing-hero"
+import Node51HeroSlideshow from "@/components/node51-hero-slideshow"
 import { Vision } from "@/components/vision"
 import { Zones } from "@/components/zones"
 import { Formats } from "@/components/formats"
@@ -14,7 +14,9 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <Navigation />
-      <LandingHero />
+      <section className="relative h-[100svh] overflow-hidden">
+        <Node51HeroSlideshow />
+      </section>
       <Vision />
       <Zones />
       <Formats />
