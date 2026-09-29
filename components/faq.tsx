@@ -2,9 +2,7 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 
-// NOTE: dépose ton image (enfant casque VR / drapeau du Sénégal) dans public/
-// sous le nom faq-vr-senegal.png puis remplace la ligne FAQ_IMAGE ci-dessous.
-const FAQ_IMAGE = "/node51-hero.jpg" // PLACEHOLDER → remplacer par "/faq-vr-senegal.png"
+const FAQ_IMAGE = "/faq-homme.jpg"
 
 const faqs = [
   {
@@ -41,7 +39,7 @@ export function FAQ() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={FAQ_IMAGE}
-              alt="Jeune Sénégalais portant un casque VR affichant le drapeau du Sénégal"
+              alt="Jeune homme portant un casque VR — NODE 51"
               className="relative z-10 w-full object-contain [mask-image:radial-gradient(125%_125%_at_50%_45%,#000_58%,transparent_100%)] [-webkit-mask-image:radial-gradient(125%_125%_at_50%_45%,#000_58%,transparent_100%)]"
             />
             {/* Brand accent line echoing the image's green border */}
