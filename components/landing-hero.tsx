@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react"
 import Link from "next/link"
 
-const HERO_IMAGE = "/node51-hero.jpg"
+const HERO_IMAGE = "/node51-hero-stage.jpg"
 
 // Flowing green shader, tuned to the neutral/emerald theme (no navy/cyan).
 const FRAG = `precision highp float;
